@@ -18,6 +18,10 @@ app.get('/', function(req, res) {
     res.sendFile('public/index.html', { root: __dirname });
 });
 
+app.get('/form', function(req, res) {
+    res.sendFile('public/form.html', { root: __dirname });
+});
+
 app.get('/welcome', (req, res) =>
   res.send({
     error: false,
@@ -42,7 +46,6 @@ app.get('/release', (req, res) =>{
 });
 
 app.get('/ok', (req, res) =>{
-
    res.status(200).json({ "status": true, "result": ' successful!' });
 });
 
